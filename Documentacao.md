@@ -8,3 +8,6 @@
 
 # Trabalhando com nodemon
 - yarn add -D nodemon
+
+# Trabalhando com json server
+- yarn add json-server
