@@ -1,6 +1,6 @@
 import fetch from 'cross-fetch';
 
-const users = async ()=>{
+const users = async (_,__, context)=>{
  const users = await fetch('http://localhost:3000/users')
     .then(res => {
       if (res.status >= 400) {
@@ -14,7 +14,7 @@ const users = async ()=>{
     .catch(err => {
       console.error(err);
     });
-
+  console.log(context)
   return users;
 }
 
