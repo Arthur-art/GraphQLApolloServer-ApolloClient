@@ -1,30 +1,10 @@
 import {ApolloServer, gql} from "apollo-server"
+import { resolvers, typeDefs } from "./graphql/schema";
 
 const port = 4003;
 const server = new ApolloServer({
-    typeDefs: gql`
-        type User {
-            name: String!
-            age: Int!
-        }
-        type Query{
-            hello: String!
-            user: User!
-            
-        }
-    `,
-    resolvers: {
-        Query:{
-            hello: () => "Hello",
-            user: () =>{
-                return {
-                    name: "Arthur",
-                    age: 25
-                }
-            }
-        }
-    }
-
+    typeDefs,
+    resolvers
 });
 
 server.listen(port).then(({url})=>{
