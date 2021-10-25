@@ -5,8 +5,15 @@
   "repository": "https://github.com/Arthur-art/GraphQLApolloServer-ApolloClient.git",
   "author": "arthur-art <arthurteixeira.guts@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "dev": "nodemon -r sucrase/register src/index"
+  },
   "dependencies": {
     "apollo-server": "^3.4.0",
-    "graphql": "^15.6.1"
+    "graphql": "^15.6.1",
+    "sucrase-register": "^1.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.14"
   }
 }
