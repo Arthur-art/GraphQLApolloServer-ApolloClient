@@ -1,5 +1,6 @@
 import {ApolloServer, gql} from "apollo-server"
 import { resolvers, typeDefs } from "./graphql/schema";
+import fetch from 'cross-fetch';
 
 const port = 4003;
 const server = new ApolloServer({
@@ -7,7 +8,7 @@ const server = new ApolloServer({
     resolvers,
     context:()=>{
         return{
-            contextId: 1910
+            fetch
         }
     }
 });
