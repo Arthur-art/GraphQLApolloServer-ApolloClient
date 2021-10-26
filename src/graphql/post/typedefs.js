@@ -8,11 +8,13 @@ export const postTypeDefs = gql`
     userId: Int!,
     indexRef: Int!,
     createdAt: String!
+    unixTimestamp: String!
     }
 
   extend type Query{
         post(id:ID!): Post!
         posts: [Post!]!
+        
     }
 
 `

@@ -1,3 +1,5 @@
+import fetch from "cross-fetch";
+
 const posts = async (_,__,{postRequest})=>{
     const posts = await postRequest;
     return posts;
@@ -17,5 +19,11 @@ export const postResolvers = {
     Query:{
         post,
         posts
+    },
+    Post:{
+        unixTimestamp: ({createdAt}) =>{
+            const timestamp = new Date(createdAt).getTime() / 1000;
+            return Math.floor(timestamp);
+        }
     }
 }
