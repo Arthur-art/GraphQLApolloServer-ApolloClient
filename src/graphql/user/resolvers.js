@@ -5,7 +5,6 @@ const users = async (_,__, {userRequest})=>{
 }
 
 const user = async (_,args,{userRequest}) =>{
-
     const users = await userRequest;
     const filterUser = await users.find((value)=>{
         if(value.id === args.id){
@@ -13,8 +12,6 @@ const user = async (_,args,{userRequest}) =>{
         }
     })
     if(filterUser) return filterUser;
-        
-    
 }
 
 export const usersResolvers = {

@@ -9,6 +9,7 @@ export const postTypeDefs = gql`
     indexRef: Int!,
     createdAt: String!
     unixTimestamp: String!
+    user: User!
     }
 
   extend type Query{
