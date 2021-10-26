@@ -11,3 +11,21 @@
 
 # Trabalhando com json server
 - yarn add json-server
+
+# Fragment graphql
+
+```gql
+fragment user on User{
+   createdAt
+   firstName
+   id
+   indexRef
+   lastName
+   userName
+}
+
+query FilterId{
+ user1:user(id: 115) {
+   ...user
+ }
+```
