@@ -7,13 +7,19 @@ const userRequest = fetch("http://localhost:3000/users")
     return response.json()
 });
 
+const postRequest = fetch("http://localhost:3000/posts")
+.then((response)=>{
+    return response.json()
+})
+
 const port = 4003;
 const server = new ApolloServer({
     typeDefs,
     resolvers,
     context:()=>{
         return{
-            userRequest
+            userRequest,
+            postRequest
         }
     }
 });

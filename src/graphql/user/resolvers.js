@@ -1,6 +1,6 @@
-const users = (_,__, {userRequest})=>{
+const users = async (_,__, {userRequest})=>{
  
-  const users =  userRequest;
+  const users = await userRequest;
   return users;
 }
 
